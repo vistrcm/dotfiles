@@ -29,7 +29,7 @@ ZSH_THEME="vist"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git git-flow brew gem knife mvn osx python ruby rvm screen ssh-agent sublime svn vagrant github gnu-utils pip )
+plugins=(git git-flow brew gem knife mvn osx python ruby rvm screen sublime svn vagrant github gnu-utils pip )
 
 source $ZSH/oh-my-zsh.sh
 

@@ -34,9 +34,15 @@ plugins=(git git-flow brew gem knife mvn osx python ruby rvm screen sublime svn 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin:/Volumes/MacHD/Users/vist/.rvm/bin
+export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin
+
+# rvm
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 alias nano="subl"
 export EDITOR="subl"
+
+#### lc stuff
+alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"
 

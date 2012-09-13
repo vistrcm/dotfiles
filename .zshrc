@@ -45,4 +45,5 @@ export EDITOR="subl"
 
 #### lc stuff
 alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"
+alias lc-my-nodes='lc-node-list| egrep -i "(sv|vitko)"'
 

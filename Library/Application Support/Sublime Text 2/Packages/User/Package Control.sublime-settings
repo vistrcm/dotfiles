@@ -4,6 +4,7 @@
 	[
 		"AdvancedNewFile",
 		"All Autocomplete",
+		"Chef",
 		"IPython Integration",
 		"Jinja2",
 		"jQuery",
@@ -18,6 +19,7 @@
 		"SideBarEnhancements",
 		"SublimeCodeIntel",
 		"SublimeLinter",
+		"Theme - Soda",
 		"ZenCoding"
 	]
 }

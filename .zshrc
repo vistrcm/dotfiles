@@ -36,6 +36,9 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin
 
+# locale
+export LANG=en_US.UTF-8
+
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 

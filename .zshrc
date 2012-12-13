@@ -44,7 +44,6 @@ export LANG=en_US.UTF-8
 
 alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 alias nano="subl"
-export EDITOR="subl"
 
 #### lc stuff
 alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"

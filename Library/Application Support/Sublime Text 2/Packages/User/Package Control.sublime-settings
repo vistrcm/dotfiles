@@ -5,7 +5,9 @@
 		"AdvancedNewFile",
 		"All Autocomplete",
 		"Chef",
+		"Codechef",
 		"GitGutter",
+		"Indent XML",
 		"IPython Integration",
 		"Jinja2",
 		"jQuery",
@@ -14,6 +16,7 @@
 		"Markdown Preview",
 		"Package Control",
 		"PlainTasks",
+		"Python Auto-Complete",
 		"Python Flake8 Lint",
 		"Python PEP8 Autoformat",
 		"Python Pep8 Lint",
@@ -21,6 +24,7 @@
 		"SublimeCodeIntel",
 		"SublimeLinter",
 		"Theme - Soda",
+		"Unittest (python)",
 		"ZenCoding"
 	]
 }

@@ -42,7 +42,8 @@ export LANG=en_US.UTF-8
 # rvm
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
-alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+#alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
 alias nano="subl"
 
 #### lc stuff

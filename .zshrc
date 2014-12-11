@@ -30,7 +30,7 @@ ZSH_THEME="vist"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(virtualenv git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip )
-plugins=(git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip )
+plugins=(git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip docker)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -55,7 +55,9 @@ alias lc-my-nodes='lc-node-list| egrep -i "(sv|vitko)"'
 
 alias chpep8='find ./ -iname "*.py" -exec pep8 {} +'
 
+alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -kill -r -domain local -domain user;killall Finder;echo "Open With has been rebuilt, Finder will relaunch"'
 
 # syntax hilight
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 

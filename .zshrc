@@ -50,6 +50,7 @@ alias nano="subl"
 #### lc stuff
 alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"
 alias lc-my-nodes='lc-node-list| egrep -i "(sv|vitko)"'
+alias lc-verbose='lc-node-list -f "%(id)s\t%(name)s\t%(ip)s\t%(rstatus)s\t%(password)s\t%(ram)s\t%(description)s"'
 
 #### python stuff
 
@@ -60,4 +61,11 @@ alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Framew
 # syntax hilight
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# The next line updates PATH for the Google Cloud SDK.
+source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
 
+# The next line enables bash completion for gcloud.
+source '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'
+
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

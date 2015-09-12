@@ -35,13 +35,12 @@ plugins=(git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=/Library/Frameworks/Python.framework/Versions/2.7/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/MacGPG2/bin:/usr/local/sbin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/sbin
 
 # locale
 export LANG=en_US.UTF-8
 
 # rvm
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
 
 #alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
@@ -51,6 +50,9 @@ alias nano="subl"
 alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"
 alias lc-my-nodes='lc-node-list| egrep -i "(sv|vitko)"'
 alias lc-verbose='lc-node-list -f "%(id)s\t%(name)s\t%(ip)s\t%(rstatus)s\t%(password)s\t%(ram)s\t%(description)s"'
+
+# gcloud stuff
+alias gcil='gcloud compute instances list'
 
 #### python stuff
 
@@ -66,6 +68,5 @@ source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
 
 # The next line enables bash completion for gcloud.
 source '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'
-
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

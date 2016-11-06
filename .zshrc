@@ -43,8 +43,8 @@ export LANG=en_US.UTF-8
 # rvm
 
 #alias subl="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
-alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
-alias nano="subl"
+#alias subl="'/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl'"
+#alias nano="subl"
 
 #### lc stuff
 alias lc-dup-nodes="lc-node-list | awk '{ print \$2 }' | sort | uniq -d"
@@ -70,3 +70,5 @@ source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
 source '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+#eval $(docker-machine env dev)

@@ -2,7 +2,6 @@ filetype plugin indent on
  
 syntax on
 set number
-set hlsearch
 set showmatch
 set nowrap
 set history=1000
@@ -14,9 +13,7 @@ elseif has("clipboard")
 endif
 
 set expandtab
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
 
 set background=dark
 colorscheme desert

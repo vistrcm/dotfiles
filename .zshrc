@@ -30,7 +30,7 @@ ZSH_THEME="vist"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(virtualenv git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip )
-plugins=(git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip docker)
+plugins=(brew colored-man-pages docker docker-compose fabric git git-extras git-flow git-hubflow git-prompt git-remote-branch gnu-utils gpg-agent history httpie kubectl osx pip python redis-cli rsync ssh-agent sublime)
 
 source $ZSH/oh-my-zsh.sh
 

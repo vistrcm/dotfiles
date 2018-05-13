@@ -1,5 +1,6 @@
 filetype plugin indent on
  
+set paste
 syntax on
 set number
 set showmatch

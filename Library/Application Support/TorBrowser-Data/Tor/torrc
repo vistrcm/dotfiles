@@ -5,5 +5,5 @@ DataDirectory /Users/vist/Library/Application Support/TorBrowser-Data/Tor
 GeoIPFile /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip
 GeoIPv6File /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip6
 
-ExcludeNodes {GB}, {US}, {RU}, {ua}, {by}, {??}
+ExcludeNodes {GB}, {US}, {RU}, {ua}, {by}, {CN}, {??}
 

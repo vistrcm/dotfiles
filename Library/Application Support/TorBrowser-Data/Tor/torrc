@@ -2,8 +2,7 @@
 # The old torrc file was renamed to torrc.orig.1 or similar, and Tor will ignore it
 
 DataDirectory /Users/vist/Library/Application Support/TorBrowser-Data/Tor
-GeoIPFile /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip
-GeoIPv6File /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip6
+ExcludeNodes {GB},{US},{RU},{ua},{by},{CN},{??}
 
-ExcludeNodes {GB}, {US}, {RU}, {ua}, {by}, {CN}, {??}
-
+GeoIPFile /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip
+GeoIPv6File /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip6

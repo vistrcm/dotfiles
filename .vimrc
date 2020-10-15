@@ -34,7 +34,7 @@ let python_highlight_all = 1
 " Display line numbers in each line
 set number
 " Add 4 spaces for each tab
-set ts=4
+set ts=2
 " It is used to control the number of tabs that will be used by vim when tab key will pressed
 set softtabstop=4
 "It is used to control the number of columns when left or right shift is pressed
@@ -60,3 +60,7 @@ set foldnestmax=10      " 10 nested fold max
 " space open/closes folds
 nnoremap <space> za
 set foldmethod=indent   " fold based on indent level
+
+" add yaml stuffs
+au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab

@@ -5,7 +5,8 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="random"
+ZSH_THEME="awesomepanda"
+#ZSH_THEME="minimal"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -26,16 +27,38 @@ ZSH_THEME="random"
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
 
+
+SHOW_AWS_PROMPT=false
+
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # plugins=(virtualenv git git-flow brew gem knife mvn osx python ruby rvm sublime svn vagrant gnu-utils pip )
-plugins=(brew colored-man-pages docker docker-compose fabric git git-extras git-flow git-hubflow git-prompt git-remote-branch gnu-utils gpg-agent history httpie kubectl osx pip python redis-cli rsync ssh-agent sublime)
+plugins=(
+    aws
+    brew
+    colored-man-pages
+    docker
+    docker-compose
+    fabric
+    git
+    git-extras
+    gnu-utils
+    gpg-agent
+    history
+    httpie
+    kubectl
+    osx
+    python
+    redis-cli
+    sublime
+)
 
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/sbin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/sbin:~/go/bin:~/bin
 
 # locale
 export LANG=en_US.UTF-8
@@ -72,3 +95,37 @@ alias fixow='/System/Library/Frameworks/CoreServices.framework/Versions/A/Framew
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 #eval $(docker-machine env dev)
+
+# enable z
+. /usr/local/etc/profile.d/z.sh
+
+# disable history sharing
+unsetopt share_history
+
+
+#test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# no need for pager
+export PAGER="less -XF"
+
+# aliases
+alias diff="colordiff"
+
+# load machine-specific aliases
+[ -f ~/.aliases.zsh ] && source ~/.aliases.zsh
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vist/misc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'; fi
+
+export EDITOR=vim
+
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+gpgconf --launch gpg-agent

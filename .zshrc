@@ -116,8 +116,8 @@ alias diff="colordiff"
 # load machine-specific aliases
 [ -f ~/.loca.zsh ] && source ~/.loca.zsh
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+#export NVM_DIR="$HOME/.nvm"
+#[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
 
 # The next line updates PATH for the Google Cloud SDK.

@@ -1,3 +1,5 @@
+#zmodload zsh/zprof
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -129,3 +131,5 @@ export EDITOR=vim
 export GPG_TTY="$(tty)"
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+
+#zprof

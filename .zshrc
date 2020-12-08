@@ -60,7 +60,7 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/sbin:~/go/bin:~/bin
+export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/local/sbin:~/go/bin:~/bin:~/.emacs.d/bin
 
 # locale
 export LANG=en_US.UTF-8
@@ -113,18 +113,18 @@ export PAGER="less -XF"
 # aliases
 alias diff="colordiff"
 
+# config for dotfiles
+# details:
+# https://www.atlassian.com/git/tutorials/dotfiles
+alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
+
+
 # load machine-specific aliases
 [ -f ~/.local.zsh ] && source ~/.local.zsh
 
 #export NVM_DIR="$HOME/.nvm"
 #[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vist/misc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'; fi
 
 export EDITOR=vim
 
@@ -133,3 +133,9 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
 #zprof
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/vist/misc/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'; fi

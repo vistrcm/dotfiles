@@ -1,3 +1,7 @@
-Library/Application\ Support/Sublime\ Text\ 2/Packages/User/Package\ Control.last-run
-Library/Application\ Support/Sublime\ Text\ 2/Packages/.DS_Store
-
+# mac files
+.DS_Store
+# idea files
+.idea/
+*.iml
+# vscode
+.vscode/

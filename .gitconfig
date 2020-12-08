@@ -1,6 +1,9 @@
 [user]
 	name = Stanislav Vitko
-	email = vist.rcm@gmail.com
+	email = stas@vitko.me
+	#signingkey = 4CD382FEF5B60088
+	signingkey = 48F22A464791F054
+
 [color]
 	diff = auto
 	status = auto

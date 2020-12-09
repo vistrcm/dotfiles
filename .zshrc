@@ -51,6 +51,9 @@ ZSH_THEME="awesomepanda"
 # source required paths
 source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
 
+SHOW_AWS_PROMPT=false
+
+
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
@@ -144,7 +147,6 @@ export PAGER="less -XF"
 
 unsetopt share_history
 
-SHOW_AWS_PROMPT=false
 
 # config for dotfiles
 # details:

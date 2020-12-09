@@ -112,7 +112,7 @@ alias gcil='gcloud compute instances list'
 
 
 # syntax highlight
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+test -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # default docker in machine
 #eval $(docker-machine env dev)

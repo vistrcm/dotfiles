@@ -11,7 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    '("ea5822c1b2fb8bb6194a7ee61af3fe2cc7e2c7bab272cbb498a0234984e1b2d9" "c2c501d69cbec36b3936bca770ef4dab426bf8db3cda6249e1816d780b3180a7" default))
- '(package-selected-packages '(magit cider)))
+ '(package-selected-packages '(auto-complete magit cider)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -19,5 +19,9 @@
  ;; If there is more than one, they won't work right.
  )
 
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
-(load-theme 'zenburn)
+;; add theme
+(load "~/.emacs.d/vist/001_set_theme.el")
+
+(ac-config-default)
+(global-auto-complete-mode t)
+

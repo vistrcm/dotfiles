@@ -13,8 +13,8 @@
     ;; Comments should appear in italics.
     (setq spacemacs-theme-comment-italic t)
 
-    ;; Use the `spacemacs-dark` theme.
-    (load-theme 'spacemacs-light t))
+    ;; Use the `spacemacs-dark` theme. This is default for console (-nw).
+    (load-theme 'spacemacs-dark t))
 
 
 ;; system appearance

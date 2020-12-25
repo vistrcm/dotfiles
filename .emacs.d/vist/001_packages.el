@@ -54,27 +54,31 @@
 ;; Enhance M-x to allow easier execution of commands
 (use-package smex
   :ensure t
-  ;; Using counsel-M-x for now. Remove this permanently if counsel-M-x works better.
-;;  :disabled t  
+  ;; may need to be disabled for now.
+  :disabled t  
   :config
   (setq smex-save-file (concat user-emacs-directory ".smex-items"))
   (smex-initialize)
   :bind ("M-x" . smex))
 
-;; Better handling of paranthesis when writing Lisps.
-(use-package paredit
-  :ensure t
-  :init
-  (add-hook 'clojure-mode-hook #'enable-paredit-mode)
-  (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
-  (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
-  (add-hook 'ielm-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-mode-hook #'enable-paredit-mode)
-  (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
-  (add-hook 'scheme-mode-hook #'enable-paredit-mode)
-  :config
-  (show-paren-mode t)
-  :bind (("M-[" . paredit-wrap-square)
-         ("M-{" . paredit-wrap-curly))
-  :diminish nil)
+;; ;; Better handling of paranthesis when writing Lisps.
+;;(use-package paredit
+;;   :ensure t
+;;   :init
+;;   (add-hook 'clojure-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'cider-repl-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'emacs-lisp-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'eval-expression-minibuffer-setup-hook #'enable-paredit-mode)
+;;   (add-hook 'ielm-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'lisp-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'lisp-interaction-mode-hook #'enable-paredit-mode)
+;;   (add-hook 'scheme-mode-hook #'enable-paredit-mode)
+;;   :config
+;;   (show-paren-mode t)
+;;   :bind (("M-[" . paredit-wrap-square)
+;;          ("M-{" . paredit-wrap-curly))
+;;   :diminish nil)
+
+;; better defaults			       
+(use-package better-defaults
+  :ensure t)

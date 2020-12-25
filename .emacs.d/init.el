@@ -2,15 +2,17 @@
 (setq inhibit-startup-message t)
 
 ;; Disable tool bar, menu bar, scroll bar.
-(tool-bar-mode -1)
-(menu-bar-mode -1)
-(scroll-bar-mode -1)
+;;(tool-bar-mode -1)
+;;(menu-bar-mode -1)
+;;(scroll-bar-mode -1)
 
 ;; Highlight current line.
-(global-hl-line-mode t)
+;;(global-hl-line-mode t)
 
 ;; Use `command` as `meta` in macOS.
-(setq mac-command-modifier 'meta)
+(setq
+ mac-command-modifier 'meta
+ mac-command-key-is-meta t)
 
 ;; Do not use `init.el` for `custom-*` code - use `custom-file.el`.
 (setq custom-file "~/.emacs.d/custom-file.el")
@@ -26,4 +28,3 @@
 
 ;; theme
 (load "~/.emacs.d/vist/002_set_theme.el")
-

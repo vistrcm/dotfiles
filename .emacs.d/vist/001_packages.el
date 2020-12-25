@@ -6,12 +6,34 @@
 (package-initialize)
 
 
-(defvar my-packages '(better-defaults
-		      projectile
-		      clojure-mode
-		      cider))
+(when (not (package-installed-p 'use-package))
+  (package-refresh-contents)
+  (package-install 'use-package))
 
-(dolist (p my-packages)
-  (unless (package-installed-p p)
-    (package-install p)))
+;;(defvar my-packages '(use-package
+;;		      spacemacs-theme
+;;		      better-defaults
+;;		      projectile
+;;		      clojure-mode
+;;		      cider))
+
+;;(dolist (p my-packages)
+;;  (unless (package-installed-p p)
+;;    (package-install p)))
+
+
+(use-package company
+  :ensure t
+  :bind (:map company-active-map
+	      ("C-n" . company-select-next)
+	      ("C-p" . company-select-previous))
+  :init
+  (setq company-idle-delay 0.01)
+  :hook (after-init . global-company-mode)
+  )
+
+(use-package magit
+  :ensure t
+  :bind ("C-x g" . magit-status))
+
 

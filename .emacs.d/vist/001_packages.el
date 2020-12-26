@@ -34,9 +34,17 @@
   :ensure t
   :bind ("C-x g" . magit-status))
 
+(defun ido-recentf-open ()
+  "Use `ido-completing-read' to \\[find-file] a recent file"
+  (interactive)
+  (if (find-file (ido-completing-read "Find recent file: " recentf-list))
+      (message "Opening file...")
+    (message "Aborting")))
 
 ;; Recent buffers in a new Emacs session
 (use-package recentf
+  :ensure t
+  :bind ("C-x C-r" . 'ido-recentf-open)
   :config
   (setq recentf-auto-cleanup 'never
         recentf-max-saved-items 1000

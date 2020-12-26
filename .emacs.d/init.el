@@ -28,3 +28,7 @@
 
 ;; theme
 (load "~/.emacs.d/vist/002_set_theme.el")
+
+;;; set directory on gui version
+(if (display-graphic-p)
+    (setq default-directory "~/"))

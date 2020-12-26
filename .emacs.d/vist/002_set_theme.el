@@ -1,6 +1,9 @@
 ;; change theme
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
+;; window size?
+(setq initial-frame-alist '((top . 0) (left . 0) (width . 170) (height . 80)))
+
 ;; font
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-14"))
 
@@ -28,3 +31,6 @@
 
 (add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
 
+
+;; line numbers
+(global-linum-mode 1)

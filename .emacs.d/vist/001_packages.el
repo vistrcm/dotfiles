@@ -57,14 +57,14 @@
   (setq ido-enable-flex-matching t)
   (setq ido-use-filename-at-point nil)
   ;; Includes buffer names of recently opened files, even if they're not open now.
-  (setq ido-use-virtual-buffers t)
+  ;; (setq ido-use-virtual-buffers t)
   :diminish nil)
 
 ;; Enhance M-x to allow easier execution of commands
 (use-package smex
   :ensure t
   ;; may need to be disabled for now.
-  :disabled t  
+  ;;:disabled t                          
   :config
   (setq smex-save-file (concat user-emacs-directory ".smex-items"))
   (smex-initialize)
@@ -91,3 +91,44 @@
 ;; better defaults			       
 (use-package better-defaults
   :ensure t)
+
+(use-package clojure-mode
+  :ensure t)
+
+(use-package clojure-mode-extra-font-locking
+  :ensure t)
+
+(use-package cider
+  :ensure t)
+
+(use-package projectile
+  :ensure t
+  :bind (:map projectile-mode-map
+              ("s-p" . 'projectile-command-map)
+              ("C-c p" . 'projectile-command-map))
+  :hook (after-init . projectile-mode))
+
+
+
+(use-package rainbow-delimiters
+  :ensure t)
+
+(use-package tagedit
+  :ensure t)
+
+;; On OS X, an Emacs instance started from the graphical user
+;; interface will have a different environment than a shell in a
+;; terminal window, because OS X does not run a shell during the
+;; login. Obviously this will lead to unexpected results when
+;; calling external utilities like make from Emacs.
+;; This library works around this problem by copying important
+;; environment variables from the user's shell.
+;; https://github.com/purcell/exec-path-from-shell
+(if (eq system-type 'darwin)
+    (use-package exec-path-from-shell
+      :ensure t
+      :hook (after-init . exec-path-from-shell-initialize)))
+
+
+;;(when (memq window-system '(mac ns))
+;;      (exec-path-from-shell-initialize))

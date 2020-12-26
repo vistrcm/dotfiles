@@ -72,7 +72,8 @@
 
 ;; Better handling of paranthesis when writing Lisps.
 ;; only on mac UI
-(if window-system
+;; details on testing: https://www.gnu.org/software/emacs/manual/html_node/elisp/Window-Systems.html
+(if (display-graphic-p)
 (use-package paredit
   :ensure t
   :init

@@ -2,7 +2,7 @@
 ;;(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/")
 
 ;; window size?
-(setq initial-frame-alist '((top . 0) (left . 0) (width . 170) (height . 80)))
+(setq initial-frame-alist '((top . 0) (left . 0) (width . 175) (height . 81)))
 
 ;; font
 (add-to-list 'default-frame-alist '(font . "JetBrains Mono-14"))

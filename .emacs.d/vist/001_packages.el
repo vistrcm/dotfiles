@@ -141,5 +141,6 @@
       :hook (after-init . exec-path-from-shell-initialize)))
 
 
-;;(when (memq window-system '(mac ns))
-;;      (exec-path-from-shell-initialize))
+(use-package which-key
+  :ensure t
+  :hook (after-init . which-key-mode))

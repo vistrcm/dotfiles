@@ -144,3 +144,9 @@
 (use-package which-key
   :ensure t
   :hook (after-init . which-key-mode))
+
+
+;;; ivy
+(use-package ivy
+  :ensure t
+  :hook (after-init . ivy-mode))

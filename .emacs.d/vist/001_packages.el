@@ -122,7 +122,10 @@
 
 
 (use-package rainbow-delimiters
-  :ensure t)
+  :ensure t
+  :init
+  (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
+  )
 
 (use-package tagedit
   :ensure t)

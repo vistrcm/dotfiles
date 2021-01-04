@@ -104,13 +104,20 @@
   :ensure t)
 
 (use-package clojure-mode
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'clojure-mode-hook #'eldoc-mode)
+  )
 
 (use-package clojure-mode-extra-font-locking
   :ensure t)
 
 (use-package cider
-  :ensure t)
+  :ensure t
+  :config
+  (add-hook 'cider-mode-hook #'eldoc-mode)
+  (add-hook 'cider-repl-mode-hook #'eldoc-mode)
+  )
 
 (use-package projectile
   :ensure t
@@ -126,6 +133,9 @@
   :init
   (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
   )
+
+(use-package eldoc
+  :ensure t)
 
 (use-package tagedit
   :ensure t)

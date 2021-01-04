@@ -130,8 +130,8 @@
 
 (use-package rainbow-delimiters
   :ensure t
-  :init
-  (add-hook 'cider-repl-mode-hook #'rainbow-delimiters-mode)
+  :config
+  (add-hook 'clojure-mode-hook #'rainbow-delimiters-mode)
   )
 
 (use-package eldoc

@@ -4,18 +4,17 @@
 ;; window size?
 (setq initial-frame-alist '((top . 0) (left . 0) (width . 175) (height . 81)))
 
+;; (use-package spacemacs-common
+;;   :ensure spacemacs-theme
+;;   :config
+;;   ;; Do not use a different background color for comments.
+;;   (setq spacemacs-theme-comment-bg nil)
 
-(use-package spacemacs-common
-    :ensure spacemacs-theme
-    :config
-    ;; Do not use a different background color for comments.
-    (setq spacemacs-theme-comment-bg nil)
+;;   ;; Comments should appear in italics.
+;;   (setq spacemacs-theme-comment-italic t)
 
-    ;; Comments should appear in italics.
-    (setq spacemacs-theme-comment-italic t)
-
-    ;; Use the `spacemacs-dark` theme. This is default for console (-nw).
-    (load-theme 'spacemacs-dark t))
+;;   ;; Use the `spacemacs-dark` theme. This is default for console (-nw).
+;;   (load-theme 'spacemacs-dark t))
 
 
 ;; system appearance

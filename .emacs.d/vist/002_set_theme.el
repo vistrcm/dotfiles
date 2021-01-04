@@ -4,8 +4,6 @@
 ;; window size?
 (setq initial-frame-alist '((top . 0) (left . 0) (width . 175) (height . 81)))
 
-;; font
-(add-to-list 'default-frame-alist '(font . "JetBrains Mono-14"))
 
 (use-package spacemacs-common
     :ensure spacemacs-theme
@@ -34,3 +32,6 @@
 
 ;; line numbers
 (global-linum-mode 1)
+
+;; font
+(add-to-list 'default-frame-alist '(font . "JetBrains Mono-14"))

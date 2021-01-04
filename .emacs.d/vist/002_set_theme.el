@@ -70,7 +70,8 @@
     ('light (load-theme 'doom-one-light t))
     ('dark (load-theme 'doom-one t))))
 
-(add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
+;; automated theme switching disabled for now
+;; (add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
 
 
 ;; line numbers

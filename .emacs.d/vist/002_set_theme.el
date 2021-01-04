@@ -74,6 +74,19 @@
 ;; (add-hook 'ns-system-appearance-change-functions #'my/apply-theme)
 
 
+;; all-the-icons required for the doom-modeline
+;; goint to install it only for UI
+(if (display-graphic-p)
+    (use-package all-the-icons
+      :ensure t
+      :config
+      (unless (member "all-the-icons" (font-family-list))
+        (all-the-icons-install-fonts t))))
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
+
 ;; line numbers
 (global-linum-mode 1)
 

@@ -163,3 +163,6 @@
 (use-package ivy
   :ensure t
   :hook (after-init . ivy-mode))
+
+(use-package yaml-mode
+  :ensure t)

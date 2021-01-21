@@ -166,3 +166,16 @@
 
 (use-package yaml-mode
   :ensure t)
+
+(use-package json-mode
+  :ensure t)
+
+;; markdown mode
+;; don't forget to install multimarkdown to use preview 
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))

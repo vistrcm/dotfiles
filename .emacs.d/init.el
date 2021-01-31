@@ -29,6 +29,10 @@
 ;; theme
 (load "~/.emacs.d/vist/002_set_theme.el")
 
+;; tramp
+(load "~/.emacs.d/vist/003_tramp.el")
+
+
 ;;; set directory on gui version
 (if (display-graphic-p)
     (setq default-directory "~/"))

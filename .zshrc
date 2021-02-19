@@ -147,6 +147,7 @@ if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then source '/
 export PAGER="less -XF"
 
 unsetopt share_history
+setopt INC_APPEND_HISTORY
 
 
 # config for dotfiles

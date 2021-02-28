@@ -1,6 +1,10 @@
 # some profiling
 # zmodload zsh/zprof
 
+
+# workaround for TRAMP in emacs
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
+
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
 

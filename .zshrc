@@ -1,5 +1,5 @@
 # some profiling
-#zmodload zsh/zprof
+# zmodload zsh/zprof
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -47,9 +47,6 @@ ZSH_THEME="awesomepanda"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
-
-# source required paths
-source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
 
 SHOW_AWS_PROMPT=false
 
@@ -124,7 +121,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # local machine specific aliases and settings
 test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 
-export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
+test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
 
 export GOPATH=$HOME/proj/go
 export PATH=$PATH:$GOPATH/bin
@@ -162,4 +159,4 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
 # print profile information
-#zprof
+# zprof

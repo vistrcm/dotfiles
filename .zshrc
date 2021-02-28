@@ -70,10 +70,9 @@ gnu-utils
 httpie
 osx
 rsync
-gpg-agent
 aws
 kubectl
-ssh-agent
+#ssh-agent
 )
 
 # User configuration
@@ -156,11 +155,12 @@ setopt INC_APPEND_HISTORY
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
-# gpg stuff
-
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+# gpg stuff if started locally
+if [[ -z $SSH_CONNECTION ]]; then
+    export GPG_TTY="$(tty)"
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
+fi
 
 # print profile information
 # zprof

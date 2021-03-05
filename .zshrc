@@ -1,5 +1,9 @@
 # some profiling
-#zmodload zsh/zprof
+# zmodload zsh/zprof
+
+
+# workaround for TRAMP in emacs
+[[ $TERM == "dumb" ]] && unsetopt zle && PS1='$ ' && return
 
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.oh-my-zsh
@@ -48,9 +52,6 @@ ZSH_THEME="awesomepanda"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# source required paths
-source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
-
 SHOW_AWS_PROMPT=false
 
 
@@ -69,10 +70,9 @@ gnu-utils
 httpie
 osx
 rsync
-gpg-agent
 aws
 kubectl
-ssh-agent
+#ssh-agent
 )
 
 # User configuration
@@ -124,7 +124,7 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # local machine specific aliases and settings
 test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 
-export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
+test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
 
 export GOPATH=$HOME/proj/go
 export PATH=$PATH:$GOPATH/bin
@@ -155,11 +155,12 @@ setopt INC_APPEND_HISTORY
 # https://www.atlassian.com/git/tutorials/dotfiles
 alias config='git --git-dir=$HOME/.dotfiles.git/ --work-tree=$HOME'
 
-# gpg stuff
-
-export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
-gpgconf --launch gpg-agent
+# gpg stuff if started locally
+if [[ -z $SSH_CONNECTION ]]; then
+    export GPG_TTY="$(tty)"
+    export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
+    gpgconf --launch gpg-agent
+fi
 
 # print profile information
-#zprof
+# zprof

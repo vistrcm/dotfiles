@@ -1,0 +1,44 @@
+{
+    "workbench.colorTheme": "Atom One Light",
+    
+    // Controls the font family.
+    "editor.fontFamily": "Hasklig",
+
+    // Controls the font size in pixels.
+    "editor.fontSize": 14,
+
+    // Enables font ligatures
+    "editor.fontLigatures": true,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.defaultDateStyle": "absolute",
+    "python.jediEnabled": false,
+    "python.venvPath": "~/.local/share/virtualenvs",
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "gitlens.advanced.telemetry.enabled": false,
+    "vs-kubernetes": {
+        "vs-kubernetes.helm-path": "/Users/vist/.vs-kubernetes/tools/helm/darwin-amd64/helm",
+        "vs-kubernetes.draft-path": "/Users/vist/.vs-kubernetes/tools/draft/darwin-amd64/draft",
+        "vs-kubernetes.minikube-path": "/Users/vist/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+        "vs-kubernetes.minikube-path.mac": "/Users/vist/.vs-kubernetes/tools/minikube/darwin-amd64/minikube"
+    },
+    "sshfs.configs": [
+        {
+            "label": "gcloud",
+            "root": "/home/vist/data",
+            "host": "sv.dev.devops.fds.com",
+            "port": 22,
+            "username": "vist",
+            "password": false,
+            "agent": "$SSH_AUTH_SOCK",
+            "name": "gcloud"
+        }
+    ],
+    "window.zoomLevel": 0,
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "go.useLanguageServer": true,
+    "python.languageServer": "Pylance"
+}

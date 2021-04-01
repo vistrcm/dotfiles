@@ -134,7 +134,13 @@ export LESS=${LESS}FX
 
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/vist/misc/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'; fi
+if [ -f '/Users/vist/misc/google-cloud-sdk/path.zsh.inc' ]
+then
+    source '/Users/vist/misc/google-cloud-sdk/path.zsh.inc'
+elif [ -f '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc' ]
+then
+    source '/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.zsh.inc'
+fi
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc'; fi

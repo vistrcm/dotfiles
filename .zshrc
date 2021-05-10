@@ -126,7 +126,7 @@ test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 
 test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
 
-export GOPATH=$HOME/proj/go
+export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
 

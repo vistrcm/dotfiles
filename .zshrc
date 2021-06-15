@@ -72,7 +72,7 @@ osx
 rsync
 aws
 kubectl
-#ssh-agent
+ssh-agent
 )
 
 # User configuration

@@ -44,6 +44,9 @@ ZSH_THEME="awesomepanda"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# Uncomment the following line to disable auto-setting terminal title. 
+DISABLE_AUTO_TITLE="true"
+
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 # The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
@@ -63,9 +66,6 @@ SHOW_AWS_PROMPT=false
 plugins=(
 colored-man-pages
 git
-httpie
-docker
-docker-compose
 gnu-utils
 httpie
 osx

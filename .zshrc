@@ -168,5 +168,12 @@ if [[ -z $SSH_CONNECTION ]]; then
     gpgconf --launch gpg-agent
 fi
 
+# check if exa exists and set alias
+command -v "$1" >/dev/null 2>&1
+if [[ $(command -v "exa" >/dev/null 2>&1) -eq 0 ]]; then
+    alias ls="exa"
+    alias ll="exa -l --grid"
+fi
+
 # print profile information
 # zprof

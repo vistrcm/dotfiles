@@ -45,5 +45,16 @@
         "*.ipynb": "jupyter.notebook.ipynb"
     },
     "editor.inlineSuggest.enabled": true,
+    "github.copilot.autocomplete.enable": true,
+    "github.copilot.enable": {
+        "*": true,
+        "yaml": false,
+        "plaintext": false,
+        "markdown": false,
+        "python": true,
+    },
+    "github.copilot.advanced": {
+    
+    },
     
 }

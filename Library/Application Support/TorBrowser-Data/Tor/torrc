@@ -4,5 +4,5 @@
 ClientOnionAuthDir /Users/vist/Library/Application Support/TorBrowser-Data/Tor/onion-auth
 DataDirectory /Users/vist/Library/Application Support/TorBrowser-Data/Tor
 ExcludeNodes {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
-GeoIPFile /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip
-GeoIPv6File /Applications/TorBrowser.app/Contents/Resources/TorBrowser/Tor/geoip6
+GeoIPFile /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip
+GeoIPv6File /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip6

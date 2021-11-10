@@ -68,7 +68,7 @@ colored-man-pages
 git
 gnu-utils
 httpie
-osx
+macos
 rsync
 aws
 kubectl

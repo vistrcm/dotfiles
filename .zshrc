@@ -147,7 +147,7 @@ if [ -f '/Users/vist/misc/google-cloud-sdk/completion.zsh.inc' ]; then source '/
 
 
 # z
-. /usr/local/etc/profile.d/z.sh
+. /opt/homebrew/etc/profile.d/z.sh
 
 # no need for pager
 export PAGER="less -XF"

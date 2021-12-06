@@ -77,7 +77,7 @@ ssh-agent
 
 # User configuration
 
-export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH:$HOME/bin"
+export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.cargo/env"
 # export MANPATH="/usr/local/man:$MANPATH"
 

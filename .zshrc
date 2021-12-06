@@ -114,6 +114,11 @@ alias diff="colordiff"
 # gcloud stuff
 alias gcil='gcloud compute instances list'
 
+# emacs-related
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias vim='emacsclient -t'
+alias vi='emacsclient -t'
 
 # syntax highlight
 test -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -51,4 +51,4 @@ export HISTTIMEFORMAT="%F %T "
 # Support non-ASCII characters in terminal.
 # Note: use LC_ALL='C' if you want sort to behave in expected way.
 export LC_ALL='en_US.UTF-8'
-source "$HOME/.cargo/env"
+. "$HOME/.cargo/env"

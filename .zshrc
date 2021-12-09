@@ -44,7 +44,7 @@ ZSH_THEME="awesomepanda"
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-# Uncomment the following line to disable auto-setting terminal title. 
+# Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line if you want to change the command execution time
@@ -115,6 +115,11 @@ alias diff="colordiff"
 alias gcil='gcloud compute instances list'
 
 # emacs-related
+alias e='emacsclient -t'
+alias ec='emacsclient -c'
+alias vim='emacsclient -t'
+alias vi='emacsclient -t'
+
 alias e='emacsclient -t'
 alias ec='emacsclient -c'
 alias vim='emacsclient -t'

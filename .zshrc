@@ -134,7 +134,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # local machine specific aliases and settings
 test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 
+# some creds
 test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
+test -e "${HOME}/.creds/JIRA_API_TOKEN" && export JIRA_API_TOKEN=$(cat ~/.creds/JIRA_API_TOKEN)
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin

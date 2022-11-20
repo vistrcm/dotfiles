@@ -178,6 +178,10 @@ if [[ -z $SSH_CONNECTION ]]; then
     export GPG_TTY="$(tty)"
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     gpgconf --launch gpg-agent
+else
+    if [ -S ~/.gnupg/S.gpg-agent-remote.ssh ]; then
+        export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent-remote.ssh
+    fi
 fi
 
 # check if exa exists and set alias

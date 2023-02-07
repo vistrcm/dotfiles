@@ -190,5 +190,8 @@ if command "exa" >/dev/null 2>&1; then
     alias ll="exa -l --grid"
 fi
 
+# disable google proxy
+export GOPRIVATE=*
+
 # print profile information
 # zprof

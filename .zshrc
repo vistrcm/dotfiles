@@ -79,6 +79,7 @@ ssh-agent
 
 export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.cargo/env"
+export PATH="$PATH:/Applications/IntelliJ IDEA.app/Contents/MacOS"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

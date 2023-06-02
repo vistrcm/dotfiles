@@ -79,6 +79,7 @@ ssh-agent
 
 export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH:$HOME/bin"
 export PATH="$PATH:$HOME/.cargo/env"
+export PATH="$PATH:/Applications/IntelliJ IDEA.app/Contents/MacOS"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
@@ -90,7 +91,7 @@ source $ZSH/oh-my-zsh.sh
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
 else
-  export EDITOR='emacs -nw'
+  export EDITOR='emacsclient -nw'
 fi
 
 # Compilation flags
@@ -125,6 +126,8 @@ alias ec='emacsclient -c'
 alias vim='emacsclient -t'
 alias vi='emacsclient -t'
 
+alias ifconfig.me='curl ifconfig.me'
+
 # syntax highlight
 test -e "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" && source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -134,7 +137,9 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 # local machine specific aliases and settings
 test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 
+# some creds
 test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
+test -e "${HOME}/.creds/JIRA_API_TOKEN" && export JIRA_API_TOKEN=$(cat ~/.creds/JIRA_API_TOKEN)
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -176,6 +181,10 @@ if [[ -z $SSH_CONNECTION ]]; then
     export GPG_TTY="$(tty)"
     export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
     gpgconf --launch gpg-agent
+else
+    if [ -S ~/.gnupg/S.gpg-agent-remote.ssh ]; then
+        export SSH_AUTH_SOCK=~/.gnupg/S.gpg-agent-remote.ssh
+    fi
 fi
 
 # check if exa exists and set alias
@@ -183,6 +192,9 @@ if command "exa" >/dev/null 2>&1; then
     alias ls="exa"
     alias ll="exa -l --grid"
 fi
+
+# disable google proxy
+export GOPRIVATE=*
 
 # print profile information
 # zprof

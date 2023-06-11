@@ -3,11 +3,12 @@
 
 ClientOnionAuthDir /Users/vist/Library/Application Support/TorBrowser-Data/Tor/onion-auth
 DataDirectory /Users/vist/Library/Application Support/TorBrowser-Data/Tor
-ExcludeExitNodes {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
-ExcludeNodes {??}
+StrictNodes 1
 GeoIPExcludeUnknown 1
+#ExcludeNodes {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
+ExcludeExitNodes {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
+NodeFamily {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
+
 GeoIPFile /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip
 GeoIPv6File /Applications/Tor Browser.app/Contents/Resources/TorBrowser/Tor/geoip6
-NodeFamily {GB},{US},{RU},{ua},{by},{CN},{fr},{au},{ca},{nz},{??}
-PathsNeededToBuildCircuits 0.950000
-StrictNodes 1
+PathsNeededToBuildCircuits 0.95

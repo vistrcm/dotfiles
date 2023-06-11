@@ -57,5 +57,7 @@
     "github.copilot.advanced": {
     
     },
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
     
 }

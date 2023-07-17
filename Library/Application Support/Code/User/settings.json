@@ -1,6 +1,6 @@
 {
     "workbench.colorTheme": "Atom One Light",
-    
+
     // Controls the font family.
     "editor.fontFamily": "JetBrainsMono-Light",
 
@@ -36,7 +36,6 @@
             "name": "gcloud"
         }
     ],
-    "window.zoomLevel": 0,
     "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "go.useLanguageServer": true,
@@ -55,7 +54,11 @@
         "python": true,
     },
     "github.copilot.advanced": {
-    
+
     },
-    
+    "editor.minimap.enabled": false,
+    "redhat.telemetry.enabled": false,
+    "files.trimTrailingWhitespace": true,
+    "editor.formatOnSave": true,
+
 }

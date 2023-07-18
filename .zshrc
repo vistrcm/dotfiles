@@ -196,5 +196,7 @@ fi
 # disable google proxy
 export GOPRIVATE=*
 
+export SAVEHIST=1000000000
+
 # print profile information
 # zprof

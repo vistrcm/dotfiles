@@ -197,6 +197,9 @@ if command "exa" >/dev/null 2>&1; then
     alias ll="exa -l --grid"
 fi
 
+test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale" \
+     && alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+
 # disable google proxy
 export GOPRIVATE=*
 

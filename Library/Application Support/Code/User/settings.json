@@ -1,12 +1,9 @@
 {
     "workbench.colorTheme": "Atom One Light",
-
     // Controls the font family.
-    "editor.fontFamily": "JetBrainsMono-Light",
-
+    "editor.fontFamily": "JetBrains Mono",
     // Controls the font size in pixels.
     "editor.fontSize": 14,
-
     // Enables font ligatures
     "editor.fontLigatures": true,
     "gitlens.advanced.messages": {
@@ -54,12 +51,9 @@
         "markdown": false,
         "python": true,
     },
-    "github.copilot.advanced": {
-
-    },
+    "github.copilot.advanced": {},
     "editor.minimap.enabled": false,
     "redhat.telemetry.enabled": false,
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
-
 }

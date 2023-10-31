@@ -141,9 +141,9 @@ test -e "${HOME}/.local.zsh" && source "${HOME}/.local.zsh"
 test -e "${HOME}/.creds/HOMEBREW_GITHUB_API_TOKEN" && export HOMEBREW_GITHUB_API_TOKEN=$(cat ~/.creds/HOMEBREW_GITHUB_API_TOKEN)
 test -e "${HOME}/.creds/JIRA_API_TOKEN" && export JIRA_API_TOKEN=$(cat ~/.creds/JIRA_API_TOKEN)
 test -e "${HOME}/.creds/ARTIFACTORY_USER" \
-    && test -e "${HOME}/.creds/ARTIFACTORY_IDENTITY_TOKEN" \
+    && test -e "${HOME}/.creds/ARTIFACTORY_PASSWORD" \
     && export ARTIFACTORY_USER=$(cat ~/.creds/ARTIFACTORY_USER) \
-    && export ARTIFACTORY_IDENTITY_TOKEN=$(cat ~/.creds/ARTIFACTORY_IDENTITY_TOKEN)
+    && export ARTIFACTORY_PASSWORD=$(cat ~/.creds/ARTIFACTORY_PASSWORD)
 
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
@@ -204,6 +204,7 @@ test -e "/Applications/Tailscale.app/Contents/MacOS/Tailscale" \
 export GOPRIVATE=*
 
 export SAVEHIST=1000000000
-
+export HISTSIZE=1000000000
+export HISTFILESIZE=100000000
 # print profile information
 # zprof

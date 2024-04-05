@@ -56,4 +56,5 @@
     "redhat.telemetry.enabled": false,
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
+    "calva.paredit.defaultKeyMap": "strict",
 }

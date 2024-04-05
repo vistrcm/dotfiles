@@ -12,7 +12,8 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="awesomepanda"
+# ZSH_THEME="awesomepanda"
+ZSH_THEME=robbyrussell
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -208,3 +209,6 @@ export HISTSIZE=1000000000
 export HISTFILESIZE=100000000
 # print profile information
 # zprof
+
+# Created by `pipx` on 2023-12-01 22:17:21
+export PATH="$PATH:/Users/vist/.local/bin"

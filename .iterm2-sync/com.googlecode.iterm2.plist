@@ -1280,7 +1280,6 @@
 	<integer>1</integer>
 	<key>ToolbeltTools</key>
 	<array>
-		<string>Profiles</string>
 		<string>Captured Output</string>
 	</array>
 	<key>UseLionStyleFullscreen</key>

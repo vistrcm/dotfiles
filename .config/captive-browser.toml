@@ -6,8 +6,8 @@
 # it maintains no state across runs. To configure this browser open a
 # normal window in it, settings will be preserved.
 browser = """
-    open -n -W -a "Google Chrome" --args \
-    --user-data-dir="$HOME/Library/Application Support/Google/Captive" \
+    rm -rf "$HOME/tmp/captive-browser" && open -n -W -a "Google Chrome" --args \
+    --user-data-dir="$HOME/tmp/captive-browser" \
     --proxy-server="socks5://$PROXY" \
     --host-resolver-rules="MAP * ~NOTFOUND , EXCLUDE localhost" \
     --no-first-run --new-window --incognito \

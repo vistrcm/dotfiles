@@ -1,5 +1,5 @@
 {
-    "workbench.colorTheme": "Nord",
+    "workbench.colorTheme": "Nord Light",
     // Controls the font family.
     "editor.fontFamily": "JetBrains Mono",
     // Controls the font size in pixels.
@@ -57,4 +57,8 @@
     "files.trimTrailingWhitespace": true,
     "editor.formatOnSave": true,
     "calva.paredit.defaultKeyMap": "strict",
+    "telemetry.telemetryLevel": "off",
+    "interactiveWindow.executeWithShiftEnter": true,
+    "editor.accessibilitySupport": "off",
+    "calva.autoOpenInspector": false,
 }

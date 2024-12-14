@@ -32,7 +32,7 @@
 
  :aliases {
            :new {:extra-deps {com.github.seancorfield/clj-new
-                              {:mvn/version "1.2.399"}}
+                              {:mvn/version "1.2.404"}}
                  :exec-fn clj-new/create
                  :exec-args {:template "app"}}
   }

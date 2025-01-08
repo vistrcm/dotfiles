@@ -207,8 +207,20 @@ export GOPRIVATE=*
 export SAVEHIST=1000000000
 export HISTSIZE=1000000000
 export HISTFILESIZE=100000000
-# print profile information
-# zprof
+
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+	builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
 
 # Created by `pipx` on 2023-12-01 22:17:21
 export PATH="$PATH:/Users/vist/.local/bin"
+eval "$(/opt/homebrew/bin/mise activate zsh)"
+
+# print profile information
+# zprof

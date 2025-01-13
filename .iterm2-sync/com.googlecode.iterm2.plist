@@ -1117,7 +1117,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>JetBrainsMono-Regular_Light 18</string>
+			<string>JetBrainsMonoNFM-Light 18</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
@@ -2500,7 +2500,7 @@
 	<key>QuitWhenAllWindowsClosed</key>
 	<true/>
 	<key>ShowFullScreenTabBar</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>

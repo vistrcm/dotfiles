@@ -218,9 +218,14 @@ function y() {
 }
 
 
+alias clojure="clojure -A:user"
+alias clj="clj -A:user"
+
 # Created by `pipx` on 2023-12-01 22:17:21
 export PATH="$PATH:/Users/vist/.local/bin"
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+
+
 
 # print profile information
 # zprof

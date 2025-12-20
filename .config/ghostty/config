@@ -26,7 +26,11 @@ background-opacity = 0.95
 background-blur-radius=15
 minimum-contrast = 1.5
 window-vsync = true
-macos-option-as-alt = false
+macos-option-as-alt = left
+
+keybind = alt+left=unbind
+keybind = alt+right=unbind
+
 desktop-notifications = true
 mouse-scroll-multiplier = 1.5
 mouse-hide-while-typing = true
@@ -41,3 +45,4 @@ mouse-shift-capture = never
 
 keybind = super+f=write_screen_file:open
 keybind = ctrl+ц=text:\x03
+keybind = shift+enter=text:\n

@@ -9,38 +9,50 @@
 ;; For all attributes other than :paths, these config files are merged left to right.
 ;; Only the last :paths is kept and others are dropped.
 
-{
-  ;; Paths
-  ;;   Directories in the current project to include in the classpath
+{;; Paths
+ ;;   Directories in the current project to include in the classpath
 
-  ;; :paths ["src"]
+ ;; :paths ["src"]
 
-  ;; External dependencies
+ ;; External dependencies
 
-  ;; :deps {
-  ;;   org.clojure/clojure {:mvn/version "1.11.1"}
-  ;; }
+ ;; :deps {
+ ;;   org.clojure/clojure {:mvn/version "1.11.1"}
+ ;; }
 
-  ;; Aliases
-	;;   resolve-deps aliases (-R) affect dependency resolution, options:
-	;;     :extra-deps - specifies extra deps to add to :deps
-	;;     :override-deps - specifies a coordinate to use instead of that in :deps
-	;;     :default-deps - specifies a coordinate to use for a lib if one isn't found
-	;;   make-classpath aliases (-C) affect the classpath generation, options:
-	;;     :extra-paths - vector of additional paths to add to the classpath
-	;;     :classpath-overrides - map of lib to path that overrides the result of resolving deps
+ ;; Aliases
+ ;;   resolve-deps aliases (-R) affect dependency resolution, options:
+ ;;     :extra-deps - specifies extra deps to add to :deps
+ ;;     :override-deps - specifies a coordinate to use instead of that in :deps
+ ;;     :default-deps - specifies a coordinate to use for a lib if one isn't found
+ ;;   make-classpath aliases (-C) affect the classpath generation, options:
+ ;;     :extra-paths - vector of additional paths to add to the classpath
+ ;;     :classpath-overrides - map of lib to path that overrides the result of resolving deps
 
- :aliases {
+ :aliases {:user {:extra-deps {global/user-clj {:local/root "/Users/vist/.clojure"}
+                               com.clojure-goes-fast/clj-async-profiler  {:mvn/version "1.6.2"}
+                               com.clojure-goes-fast/clj-java-decompiler {:mvn/version "0.3.7"}
+                               com.clojure-goes-fast/clj-memory-meter    {:mvn/version "0.4.0"}
+                               criterium/criterium                       {:mvn/version "0.4.6"}}
+                  :jvm-opts ["-Djdk.attach.allowAttachSelf"
+                             "-XX:+UseG1GC"
+                             "-XX:-OmitStackTraceInFastThrow"
+                             "-XX:+UnlockDiagnosticVMOptions" "-XX:+DebugNonSafepoints"]}
            :new {:extra-deps {com.github.seancorfield/clj-new
                               {:mvn/version "1.2.404"}}
                  :exec-fn clj-new/create
                  :exec-args {:template "app"}}
-  }
+           :mcp {:deps {org.slf4j/slf4j-nop {:mvn/version "2.0.16"} ;; Required for stdio server
+                        com.bhauman/clojure-mcp {:git/url "https://github.com/bhauman/clojure-mcp.git"
+                                                 :git/tag "v0.1.7-alpha-pre"
+                                                 :git/sha "d28a6712f7a94b22bbbdf846de4e80c36589aa80"}}
+                 :exec-fn clojure-mcp.main/start-mcp-server
+                 :exec-args {:port 7888}}}
 
-  ;; Provider attributes
+ ;; Provider attributes
 
-  ;; :mvn/repos {
-  ;;   "central" {:url "https://repo1.maven.org/maven2/"}
-  ;;   "clojars" {:url "https://repo.clojars.org/"}
-  ;; }
-}
+ ;; :mvn/repos {
+ ;;   "central" {:url "https://repo1.maven.org/maven2/"}
+ ;;   "clojars" {:url "https://repo.clojars.org/"}
+ ;; }
+ }
